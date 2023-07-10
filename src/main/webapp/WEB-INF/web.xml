@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         version="2.5"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+<display-name>MovieApi</display-name>
+  <servlet>
+    <servlet-name>romancesServlet</servlet-name>
+    <servlet-class>api.RomancesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>romancesServlet</servlet-name>
+    <url-pattern>/romances</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>comedyServlet</servlet-name>
+    <servlet-class>api.ComedyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>comedyServlet</servlet-name>
+    <url-pattern>/comedy</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>documentariesServlet</servlet-name>
+    <servlet-class>api.DocumentariesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>documentariesServlet</servlet-name>
+    <url-pattern>/documentaries</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>netflixOriginalsServlet</servlet-name>
+    <servlet-class>api.NetflixOriginalsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>netflixOriginalsServlet</servlet-name>
+    <url-pattern>/netflixoriginals</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>topRatedServlet</servlet-name>
+    <servlet-class>api.TopRatedServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>topRatedServlet</servlet-name>
+    <url-pattern>/toprated</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>trendingServlet</servlet-name>
+    <servlet-class>api.TrendingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>trendingServlet</servlet-name>
+    <url-pattern>/trending</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>Register</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>CORS</filter-name>
+    <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+    <init-param>
+      <param-name>cors.allowOrigin</param-name>
+      <param-value>*</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CORS</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+</web-app>
